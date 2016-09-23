@@ -2,7 +2,7 @@
 distribution.py
 Author: <your name here>
 Credit: <list sources used, if any>
-
+        https://github.com/TheBigBlueBlob/Character-Distribution/blob/master/distribution.py
 Assignment:
 
 Write and submit a Python program (distribution.py) that computes and displays 
