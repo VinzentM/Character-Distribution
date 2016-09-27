@@ -36,91 +36,50 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-string = str(input("Please enter a string of text (the bigger the better):"))
-print('The distribution of characters in "{0}" is:'.format(string))
-stringl = string.lower()
-stringw = stringl.replace(" ", "")
-stringp = stringw.replace(".", "")
-lisstr = stringp
-countr = len(lisstr)
-a = 0
-b = 0
-c = 0
-d = 0
-e = 0
-f = 0
-g = 0
-h = 0
-i = 0
-j = 0
-k = 0
-l = 0
-m = 0
-n = 0
-o = 0
-p = 0
-q = 0
-r = 0
-s = 0
-t = 0
-u = 0
-v = 0
-w = 0
-x = 0
-y = 0
-z = 0
-while countr > -1:
-    countr -= 1
-    if lisstr[countr] == 'a':
-        a += 1
-    elif lisstr[countr] == 'b':
-        b += 1
-    elif lisstr[countr] == 'c':
-        c += 1
-    elif lisstr[countr] == 'd':
-        d += 1
-    elif lisstr[countr] == 'e':
-        e += 1
-    elif lisstr[countr] == 'f':
-        f += 1
-    elif lisstr[countr] == 'g':
-        g += 1
-    elif lisstr[countr] == 'h':
-        h += 1
-    elif lisstr[countr] == 'i':
-        i += 1
-    elif lisstr[countr] == 'j':
-        j += 1
-    elif lisstr[countr] == 'k':
-        k += 1
-    elif lisstr[countr] == 'l':
-        l += 1
-    elif lisstr[countr] == 'm':
-        m += 1
-    elif lisstr[countr] == 'n':
-        n += 1
-    elif lisstr[countr] == 'o':
-        o += 1
-    elif lisstr[countr] == 'p':
-        p += 1
-    elif lisstr[countr] == 'q':
-        q += 1
-    elif lisstr[countr] == 'r':
-        r += 1
-    elif lisstr[countr] == 's':
-        s += 1
-    elif lisstr[countr] == 't':
-        t += 1
-    elif lisstr[countr] == 'u':
-        u += 1
-    elif lisstr[countr] == 'v':
-        v += 1
-    elif lisstr[countr] == 'w':
-        w += 1
-    elif lisstr[countr] == 'x':
-        x += 1
-    elif lisstr[countr] == 'y':
-        y += 1
-    elif lisstr[countr] == 'z':
-        z += 1
-print("a"*a)
+uselessvariable = 0
+import string
+alphaList = list(string.ascii_lowercase)
+origText = str(input("Please enter a string of text (the bigger the better): "))
+print('The distribution of characters in "' + origText + '" is: ')
+newOrigList = origText.lower()
+numList = list(range(1,27))
+MyList = []
+MyList.append(newOrigList.count('a'))
+MyList.append(newOrigList.count('b'))
+MyList.append(newOrigList.count('c'))
+MyList.append(newOrigList.count('d'))
+MyList.append(newOrigList.count('e'))
+MyList.append(newOrigList.count('f'))
+MyList.append(newOrigList.count('g'))
+MyList.append(newOrigList.count('h'))
+MyList.append(newOrigList.count('i'))
+MyList.append(newOrigList.count('j'))
+MyList.append(newOrigList.count('k'))
+MyList.append(newOrigList.count('l'))
+MyList.append(newOrigList.count('m'))
+MyList.append(newOrigList.count('n'))
+MyList.append(newOrigList.count('o'))
+MyList.append(newOrigList.count('p'))
+MyList.append(newOrigList.count('q'))
+MyList.append(newOrigList.count('r'))
+MyList.append(newOrigList.count('s'))
+MyList.append(newOrigList.count('t'))
+MyList.append(newOrigList.count('u'))
+MyList.append(newOrigList.count('v'))
+MyList.append(newOrigList.count('w'))
+MyList.append(newOrigList.count('x'))
+MyList.append(newOrigList.count('y'))
+MyList.append(newOrigList.count('z'))
+NewnumList = numList[::-1]
+
+
+tupleList = zip(MyList, NewnumList, alphaList)
+tupleList = list(tupleList)
+tupleList.sort(reverse=True)
+counter = 0
+while counter < 26:
+    if tupleList[counter][0] != 0:
+        print(str(tupleList[counter][2])*int(tupleList[counter][0]))
+    else:
+        uselessvariable += 1
+    counter += 1
