@@ -1,7 +1,7 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Vinzent
+Credit: Liam
         https://github.com/TheBigBlueBlob/Character-Distribution/blob/master/distribution.py
 Assignment:
 
